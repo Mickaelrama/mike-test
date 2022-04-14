@@ -1,0 +1,26 @@
+@import "./form.scss";
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  & h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .login-from-container {
+    border-radius: 4px;
+    padding: 24px;
+    background-color: rgb(231, 231, 231);
+    @extend .form;
+    min-width: 300px;
+    max-width: 500px;
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

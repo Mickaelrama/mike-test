@@ -1,0 +1,21 @@
+
+FROM node:14.17.2
+
+RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/app/backend
+#
+WORKDIR /usr/src/app/backend
+
+COPY package*.json ./
+RUN npm install --force
+RUN npm rebuild bcrypt --build-from-source
+
+COPY . .
+
+EXPOSE 4000
+
+ENV MONGODB_URI=$MONGODB_URI
+
+ENV JWT_SECRET=$JWT_SECRET
+
+CMD [ "npm", "start"]

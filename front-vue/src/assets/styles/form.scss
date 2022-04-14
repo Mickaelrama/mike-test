@@ -1,0 +1,83 @@
+.my-input {
+  width: calc(100% - 22px) !important;
+  font-family: "Mulish" !important;
+  border: 2px solid #0000004d;
+  border-radius: 4px;
+  padding-left: 16px;
+  font-size: 16px;
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.199);
+  }
+  &:focus {
+    border: 2px solid #58585846;
+  }
+}
+
+.form {
+  margin-top: 32px;
+  width: 100%;
+  .formulate-input-error {
+    margin-left: -40px !important;
+    margin-top: -16px !important;
+    list-style: none !important;
+  }
+  .formulate-input {
+    width: 100%;
+    margin-bottom: 24px;
+    .formulate-input-wrapper {
+      width: 100%;
+      .formulate-input-element {
+        width: 100%;
+        & input {
+          @extend .my-input;
+          height: 46px;
+        }
+        & select {
+          @extend .my-input;
+          height: 46px;
+          padding-left: 12px;
+          color: rgba(0, 0, 0, 0.199);
+          &:focus {
+            color: rgb(59, 59, 59);
+          }
+        }
+        & textarea {
+          @extend .my-input;
+          padding-top: 16px;
+          width: 100%;
+          height: 150px;
+          resize: none;
+          &::-webkit-scrollbar {
+            width: 5px;
+          }
+
+          /* Track */
+          &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+          }
+
+          /* Handle */
+          &::-webkit-scrollbar-thumb {
+            background: #888;
+          }
+
+          /* Handle on hover */
+          &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+          }
+        }
+      }
+
+      & label {
+        font-size: 16px;
+      }
+    }
+    .formulate-input-error {
+      color: rgb(255, 38, 38);
+      font-size: 12px;
+    }
+  }
+  .formulate-input-help {
+    font-size: 12px;
+  }
+}

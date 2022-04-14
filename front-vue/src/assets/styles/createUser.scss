@@ -1,0 +1,22 @@
+@import "../styles/form.scss";
+
+.create-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .form-create-container {
+    border-radius: 4px;
+    padding: 24px;
+    background-color: rgb(231, 231, 231);
+    @extend .form;
+    min-width: 300px;
+    max-width: 500px;
+    & h1 {
+      text-align: center;
+    }
+    .button-save-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

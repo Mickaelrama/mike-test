@@ -1,0 +1,31 @@
+.combattant-camp {
+  position: relative;
+  height: 100%;
+  .nom-combattant {
+    font-size: 40px;
+    font-weight: bolder;
+  }
+
+  .winner-declaration {
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(69, 250, 69);
+  }
+
+  .button-commande-container {
+    margin: 24px 0px;
+    & button {
+      margin-right: 16px;
+    }
+  }
+  .health-contaier {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+  }
+}

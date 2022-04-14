@@ -1,0 +1,22 @@
+version: "3"
+services:
+  # Create frontend container
+  frontend: # Name of our service
+    build: ./front-vue # path to dockerfile
+    ports: # Port binding to host from docker container
+      - "8080:8080" # Bind port 3000 of host to 3000 of container
+    container_name: frontend-docker
+    restart: always # What to do if container crashes
+    environment:
+      VUE_APP_API_URL: http://localhost:4000
+  # Create backend container
+  backend:
+    # Create backend container
+    build: ./back-node
+    ports:
+      - "4000:4000"
+    environment:
+      MONGODB_URI: mongodb+srv://mike:Mickael0330396481@cluster0.0vube.mongodb.net/test-hairun?retryWrites=true&w=majority
+      JWT_SECRET: 2312hsdjfhhdkjsaeaihwef3423
+    container_name: backend-docker
+    restart: always

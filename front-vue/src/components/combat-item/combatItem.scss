@@ -1,0 +1,40 @@
+.ready {
+  background-color: rgb(162, 255, 162) !important;
+}
+
+.combat-item {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 16px;
+  border-radius: 24px;
+  background-color: rgb(255, 200, 98);
+  margin-right: 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(255, 200, 98, 0.473);
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    & div:nth-child(2) {
+      color: red;
+      font-weight: bold;
+      font-size: 30px;
+      text-align: center;
+    }
+    & div {
+      max-width: 120px;
+      font-size: 16px;
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

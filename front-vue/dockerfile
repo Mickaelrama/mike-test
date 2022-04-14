@@ -1,0 +1,18 @@
+
+FROM node:14.17.2
+
+RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/app/frontend
+
+WORKDIR /usr/src/app/frontend
+
+COPY package*.json ./
+RUN npm install --force
+
+COPY . .
+
+ENV VUE_APP_API_URL=$VUE_APP_API_URL
+
+EXPOSE 8080
+# Command to run our app
+CMD [ "npm", "run","serve" ]

@@ -1,0 +1,41 @@
+@import "../styles/form.scss";
+.combattants {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & h1 {
+      margin-right: 16px;
+    }
+  }
+
+  .create-combattant-form-container {
+    position: relative;
+    .create-combattant-form {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+      border-radius: 4px;
+      padding: 24px;
+      background-color: rgb(231, 231, 231);
+      @extend .form;
+      .fermer-btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 16px;
+        color: red;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .combattants-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

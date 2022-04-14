@@ -1,0 +1,23 @@
+#app {
+  @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..900;1,700");
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat");
+  @import url("https://fonts.googleapis.com/css2?family=Roboto");
+  @import "./button.scss";
+
+  font-family: "Mulish" !important;
+  color: #5b5b5b;
+  .icon {
+    font-size: 10px !important;
+  }
+  .router-view {
+    padding: 40px;
+  }
+}
+*:focus {
+  outline: none;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  overflow: auto;
+}
